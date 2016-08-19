@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheat table</title>
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/cheats.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/site.css"/>
+    <meta charset="UTF-8">
+</head>
+<body>
+<header id="menu">
+    <a href="#" id="linkHome">Home</a>
+    <a href="#" id="linkLogin">Login</a>
+    <a href="#" id="linkRegister">Register</a>
+    <a href="#" id="linkListCheat">View cheats</a>
+    <a href="#" id="linkAddCheat">Add new cheat</a>
+    <a href="#" id="linkProfile">My Profile</a>
+    <a href="#" id="linkLogout">Logout</a>
+</header>
+
+<main class="wrapper">
+    <section id="loadingBox">Loading...</section>
+    <section id="infoBox" onclick='$(this).fadeOut()'>Info</section>
+    <section id="errorBox" onclick='$(this).fadeOut()'>Error</section>
+    <section id="viewHome">
+        <div id="homeFormat">
+            <h1>Welcome</h1>
+            Welcome to my cheat table.
+        </div>
+    </section>
+
+    <section id="viewLogin">
+        <h1 class="textTitle">Please login</h1>
+        <form id="formLogin">
+            <div class="textInfo">Username:</div>
+            <div class="inputInfo"><input type="text" id="loginUser" required="true"></div>
+            <div class="textInfo">Password:</div>
+            <div class="inputInfo"><input type="password" id="loginPass" required="true"></div>
+            <br>
+            <div class="inputButton"><input type="submit" value="  Login  "></div>
+        </form>
+    </section>
+
+    <section id="viewRegister">
+        <h1 class="textTitle">Please register here</h1>
+        <form id="formRegister">
+            <div class="textInfo">Username:</div>
+            <div class="inputInfo"><input type="text" id="registerUser" required="true"></div>
+            <div class="textInfo">Password:</div>
+            <div class="inputInfo"><input type="password" id="registerPass" required="true"></div>
+            <div class="textInfo">Password Confirm:</div>
+            <div class="inputInfo"><input type="password" id="registerPassConf" required="true"></div>
+            <br>
+            <div class="inputButton"><input type="submit" value="  Register  "></div>
+        </form>
+    </section>
+
+    <section id="viewCheats">
+        <div id="cheats"></div>
+    </section>
+
+    <section id="viewAddCheat">
+        <h1 class="textTitle">Add new cheat</h1>
+        <form id="formAddCheats">
+            <div class="textInfo">Game:</div>
+            <div class="inputInfo"><input type="text" id="gameTitle" required></div>
+            <div class="textInfo">Cheat:</div>
+            <div class="inputInfo"><input type="text" id="gameCheat" required></div>
+            <div class="textInfo">Description:</div>
+            <div class="inputInfo"><textarea id="cheatDescription" rows="10" required></textarea></div>
+            <div class="textInfo">Tags:</div>
+            <div class="inputInfo"><textarea id="cheatTags" rows="1" required></textarea></div>
+            <br>
+            <div class="inputButton"><input type="submit" value="Create"></div>
+        </form>
+    </section>
+
+    <section id="viewProfile">
+        <div id="formProfile"></div>
+    </section>
+
+</main>
+
+<footer>Cheat table</footer>
+</body>
+</html>
