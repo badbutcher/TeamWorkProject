@@ -27,7 +27,7 @@ main > section {
 }
 
 section h1 {
-    margin: 10px 0px;
+    margin: 10px 0;
     font-size: 1.2em;
 }
 
@@ -119,7 +119,8 @@ footer {
     border-radius: 10px;
     border: solid #925e00;
 }
-.inputButton{
+
+.inputButton {
     text-align: center;
     margin: 0 auto;
     width: 80px;
@@ -130,15 +131,15 @@ footer {
     display: block;
 }
 
-.inputInfo:hover{
+.inputInfo:hover {
     border: solid orange;
 }
 
-.wrapper{
+.wrapper {
     width: 80%;
     margin: 0 auto;
 }
 
-.tableFormat{
+.tableFormat {
     margin: 0 auto;
 }

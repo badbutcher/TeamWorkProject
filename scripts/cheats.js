@@ -12,7 +12,7 @@ function showHideMenuLinks() {
     if (sessionStorage.getItem('authToken') == null) {
         $("#linkLogin").show();
         $("#linkRegister").show();
-        $("#linkListCheat").show();//!!!!
+        $("#linkListCheat").show();
         $("#linkAddCheat").hide();
         $("#linkProfile").hide();
         $("#linkLogout").hide();
@@ -164,9 +164,7 @@ function register() {
             error: handleAjaxError
         });
 
-        function registerSuccess(response) {
-            // let userAuth = response._kmd.authtoken;
-            // sessionStorage.setItem('authToken', userAuth);
+        function registerSuccess() {
             showHideMenuLinks();
             listCheats();
             showInfo('User registration successful.')
@@ -180,7 +178,6 @@ function listCheats() {
 
     const kinveyCheatsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/cheats";
     const kinveyAuthHeaders = {
-        //'Authorization': "Kinvey " + sessionStorage.getItem('authToken')
         'Authorization': "Basic " + btoa("guest1:guest1")
     };
 
@@ -238,7 +235,6 @@ function loadCheatsSuccess(cheats) {
         $('#cheats').append(info).append(cheatsTable).append($('<button id="showMore" class="inputButton">').text('Show more'));
         $('table').find('tr:gt(5)').hide();
 
-
         $("#showMore").on("click", function () {
             $('table').find('tr:gt(0)').show();
             $("#showMore").hide();
@@ -252,7 +248,6 @@ function listUserCheats() {
 
     const kinveyCheatsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/cheats";
     const kinveyAuthHeaders = {
-        //'Authorization': "Kinvey " + sessionStorage.getItem('authToken')
         'Authorization': "Basic " + btoa("guest1:guest1")
     };
 
